@@ -1,0 +1,35 @@
+# OsmType  Tag          DataType     Flags
+node,way   access       text         linear
+node,way   addr:housename      text  linear
+node,way   addr:housenumber    text  linear
+node,way   addr:interpolation  text  linear
+node,way   addr:street         text  linear
+node,way   addr:place         text  linear
+node,way   addr:region         text  linear
+node,way   addr:postcode         text  linear
+node,way   addr:city         text  linear
+
+node,way   admin_level  text         linear
+node,way   amenity      text         polygon
+node,way   area         text         # hard coded support for area=1/yes => polygon is in osm2pgsql
+node,way   boundary     text         linear
+node,way   building     text         polygon
+node       capital      text         linear
+node,way   generator:source    text  linear
+node,way   highway      text         linear
+node,way   intermittent text         linear
+node,way   junction     text         linear
+node,way   landuse      text         polygon
+node,way   layer        text         linear
+node,way   leisure      text         polygon
+node,way   name         text         linear
+node,way   natural      text         polygon  # natural=coastline tags are discarded by a hard coded rule in osm2pgsql
+node,way   place        text         polygon
+node       poi          text
+node,way   population   text         linear
+node,way   public_transport text     polygon
+node,way   railway      text         linear
+node,way   ref          text         linear
+node,way   surface      text         linear
+node,way   z_order      int4         linear # This is calculated during import
+way        way_area     real                # This is calculated during import

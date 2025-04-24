@@ -1,0 +1,9 @@
+
+global:
+  scrape_interval: 5s
+scrape_configs:
+  - job_name: "geocoder"
+    static_configs:
+      # the first target is just to be able to scrap during development
+      - targets: ["host.docker.internal:8080", "server:8081"]
+
